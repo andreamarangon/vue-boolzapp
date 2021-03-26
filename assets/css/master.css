@@ -9,8 +9,11 @@
 body {
   background-color: #151515;
   font-family: 'Lato', sans-serif;
-  font-size: 18px;
   color: #000;
+}
+
+ul {
+  list-style: none;
 }
 
 #root {
@@ -88,6 +91,18 @@ input {
   height: 40px;
   width: 100%;
   outline: none;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.contact img {
+  width: 15%;
+  border-radius: 50%;
+
 }
 
 
