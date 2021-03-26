@@ -58,17 +58,22 @@ aside {
 .container-user {
   height: 60px;
   background-color: #EDEDED;
+  display: flex;
+  align-items: center;
 }
 
-.contact-logo-container img {
-  width: 15%;
+.user-logo-container img {
+  width: 50px;
   border-radius: 50%;
+  margin-left: 5px;
 }
 
 /* notifiche */
 .notification {
   background-color: #9EE1FF;
   height: 65px;
+  display: flex;
+  align-items: center;
 }
 
 .notification i {
@@ -83,6 +88,7 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5px;
 }
 
 input {
@@ -97,12 +103,13 @@ input {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  height: 70px;
 }
 
 .contact img {
-  width: 15%;
+  width: 50px;
   border-radius: 50%;
-
+  margin: 0 10px;
 }
 
 
