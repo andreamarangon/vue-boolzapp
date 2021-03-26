@@ -16,9 +16,48 @@ body {
 #root {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* sfondo */
+.sfondo {
+  height: 100%;
+  width: 100%;
 }
 
+.green {
+  height: 15%;
+  background-color: #009788;
+}
 
+.beige {
+  height: 85%;
+  background-color: #D6DBD7;
+}
+
+.window {
+  position: fixed;
+  z-index: 1;
+  height: 95vh;
+  width: 85vw;
+  background-color: #fff;
+  display: flex;
+}
+/* contatti */
+.container-contacts {
+  width: 450px;
+  height: 100%;
+  background-color: gray;
+
+}
+
+/* chat */
+.container-chat {
+  background-color: yellow;
+  height: 100%;
+  width: 100%;
+}
 
 /* UTILITY */
 .text-white {
