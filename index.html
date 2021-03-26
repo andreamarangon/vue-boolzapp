@@ -19,8 +19,32 @@
     <!-- finestra principale -->
     <div class="window">
       <!-- contatti -->
-      <aside class="container-contacts">
-
+      <aside>
+        <!-- user -->
+        <div class="container-user">
+          <div class="contact-logo-container">
+            <img src="./assets/img/avatar_1.jpg" alt="">
+          </div>
+        </div>
+        <!-- notifiche -->
+        <div class="notification">
+          <div class="container-bell">
+            <i class="fas fa-bell-slash"></i>
+          </div>
+        </div>
+        <div class="contacts-input">
+          <input type="text" name="" placeholder="Cerca o inizia una nuova chat">
+        </div>
+        <div class="container-contacts">
+          <ul class="contacts">
+            <li v-for="contact in contacts">
+              <span
+                class="title">
+               {{contact.name}}
+              </span>
+            </li>
+          </ul>
+        </div>
       </aside>
       <!-- chat -->
       <div class="container-chat">

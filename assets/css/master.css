@@ -10,7 +10,7 @@ body {
   background-color: #151515;
   font-family: 'Lato', sans-serif;
   font-size: 18px;
-  color: #fff;
+  color: #000;
 }
 
 #root {
@@ -45,19 +45,60 @@ body {
   display: flex;
 }
 /* contatti */
-.container-contacts {
+aside {
   width: 450px;
   height: 100%;
-  background-color: gray;
-
+  background-color: #FFFFFF;
 }
+
+/* user */
+.container-user {
+  height: 60px;
+  background-color: #EDEDED;
+}
+
+.contact-logo-container img {
+  width: 15%;
+  border-radius: 50%;
+}
+
+/* notifiche */
+.notification {
+  background-color: #9EE1FF;
+  height: 65px;
+}
+
+.notification i {
+  color: #9EE1FF
+}
+
+.container-bell {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  background-color: #fff;
+  color: #9AA0A6;
+  height: 40px;
+  width: 100%;
+  outline: none;
+}
+
+
 
 /* chat */
 .container-chat {
-  background-color: yellow;
   height: 100%;
   width: 100%;
+  background-image: url('../img/mine.jpg');
 }
+
 
 /* UTILITY */
 .text-white {
