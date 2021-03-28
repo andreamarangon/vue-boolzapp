@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="stylesheet" href="./assets/css/master.css">
   <title>Vue Boolzap</title>
@@ -22,8 +21,11 @@
       <aside>
         <!-- user -->
         <div class="container-user">
-          <div class="user-logo-container">
-            <img src="./assets/img/avatar_io.jpg" alt="">
+          <img src="./assets/img/avatar_io.jpg" alt="avatar_io">
+          <div class="container-icons-user">
+            <i class="fas fa-circle-notch"></i>
+            <i class="fas fa-comment-alt"></i>
+            <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
         <!-- notifiche -->
@@ -31,23 +33,54 @@
           <div class="container-bell">
             <i class="fas fa-bell-slash"></i>
           </div>
+          <div class="notification-tool-container">
+            <h4>Ricevi notifiche di nuovi messaggi</h4>
+            <a href="#">Attiva notifiche desktop</a>
+          </div>
         </div>
+        <!-- input contatti -->
         <div class="contacts-input">
+          <i class="fas fa-search"></i>
           <input type="text" name="" placeholder="Cerca o inizia una nuova chat">
         </div>
         <div class="container-contacts">
           <div class="contact" v-for="contact in contacts">
             <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="">
-            <span
+            <h4
               class="name">
              {{contact.name}}
-            </span>
+           </h4>
           </div>
         </div>
       </aside>
       <!-- chat -->
       <div class="container-chat">
-
+        <div class="container-chat-name">
+          <div class="info-chat-name-container">
+            <img :src="'./assets/img/avatar' + contacts[0].avatar + '.jpg'" alt="">
+            <h4>{{contacts[0].name}}</h4>
+          </div>
+          <div class="container-icons-chat">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-paperclip"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
+        <!-- messaggi -->
+        <div class="container-msg">
+          <div class="container-msg-sent">
+            <div class="msg-box sent-box">{{contacts[0].messages[0].text}}</div>
+          </div>
+          <div class="container-msg-received">
+            <div class="msg-box received-box">{{contacts[0].messages[2].text}}</div>
+          </div>
+        </div>
+        <!-- input messaggi -->
+        <div class="container-chat-input">
+          <i class="fas fa-smile"></i>
+          <input type="text" name="" value="" placeholder=" Scrivi un messaggio">
+          <i class="fas fa-microphone"></i>
+        </div>
       </div>
     </div>
   </div>
