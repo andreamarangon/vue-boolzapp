@@ -154,14 +154,21 @@ aside {
 .container-chat-name {
   height: 60px;
   background-color: #EDEDED;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
+  position: relative;
 }
 
 .info-chat-name-container {
   display: flex;
   align-items: center;
+}
+
+.container-icons-chat {
+  position: absolute;
+  right: 0;
+  top: 18px;
 }
 
 .container-icons-chat i {

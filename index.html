@@ -45,7 +45,11 @@
         </div>
         <!-- contatti -->
         <div class="container-contacts">
-          <div class="contact" v-for="(contact ,i) in contacts" :class="(i==index)? 'active' : ''">
+          <div
+            class="contact"
+            v-for="(contact ,i) in contacts"
+
+            @click="addActive(contact, i)">
             <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="">
             <h4
               class="name">
@@ -56,26 +60,33 @@
       </aside>
       <!-- chat -->
       <div class="container-chat">
-        <div class="container-chat-name">
-          <div class="info-chat-name-container">
-            <img :src="'./assets/img/avatar' + contacts[0].avatar + '.jpg'" alt="">
-            <h4>{{contacts[0].name}}</h4>
+        <!-- div con v for contatto in contatti. controllo se contatto.visible è true -->
+        <!-- <div class="" v-for="(contact,i) in contacts" v-if="contact.visible == true"> -->
+          <div class="container-chat-name">
+            <div class="info-chat-name-container" v-for="(contact,i) in contacts" v-if="contact.visible == true">
+              <img :src="'./assets/img/avatar' + contacts[i].avatar + '.jpg'" alt="">
+              <h4>{{contacts.name}}</h4>
+            </div>
+            <div class="container-icons-chat">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-paperclip"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
           </div>
-          <div class="container-icons-chat">
-            <i class="fas fa-search"></i>
-            <i class="fas fa-paperclip"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-        </div>
+        <!-- </div> -->
         <!-- messaggi -->
         <div class="container-msg">
-          <div class="messages" v-for="msg in contacts[index].messages">
-            <div
-              class="msg"
-              :class="msg.status">
-              <span class="msg-text">{{msg.text}}</span>
-              <small class="msg-time">{{getTime(msg.date)}}</small>
+          <!-- div con v for contatto in contatti. controllo se contatto.visible è true -->
+          <div class="" v-for="(contact,i) in contacts" v-if="contact.visible == true">
+            <div class="messages" v-for="msg in contacts[i].messages">
+              <div
+                class="msg"
+                :class="msg.status">
+                <span class="msg-text">{{msg.text}}</span>
+                <small class="msg-time">{{getTime(msg.date)}}</small>
+              </div>
             </div>
+
           </div>
         </div>
         <!-- input messaggi -->
