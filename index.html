@@ -55,6 +55,7 @@
               class="name">
              {{contact.name}}
            </h4>
+           <!-- <span>{{i.text}}</span> -->
           </div>
         </div>
       </aside>
@@ -67,6 +68,7 @@
               v-if="contact.visible == true">
               <img :src="'./assets/img/avatar' + contacts[i].avatar + '.jpg'" alt="">
               <h4>{{contacts[i].name}}</h4>
+              <!-- <span>{{contact.messages[1].getTime(contact.date)}}</span> -->
             </div>
             <div class="container-icons-chat">
               <i class="fas fa-search"></i>
@@ -80,7 +82,7 @@
           <div
             v-for="(contact,i) in contacts"
             v-if="contact.visible == true">
-            <div class="messages" v-for="msg in contacts[i].messages">
+            <div class="messages" v-for="msg in contact.messages">
               <div
                 class="msg"
                 :class="msg.status">

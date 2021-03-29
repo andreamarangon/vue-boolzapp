@@ -91,7 +91,10 @@ var app = new Vue({
   },
   methods: {
     getTime: function (date) {
-      let dateTime = new Date(date);
+      let newDate = date.split(' ');
+      let temp = newDate[0].split('/');
+      let nuovaData = temp[2] +'-'+ temp[1] + '-'+ temp[0] + ' ' + newDate[1];
+      let dateTime = new Date(nuovaData);
       let hours = dateTime.getHours();
       let minutes = dateTime.getMinutes();
       return `${hours}:${minutes}`;
