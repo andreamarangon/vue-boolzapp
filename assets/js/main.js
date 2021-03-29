@@ -1,6 +1,7 @@
 var app = new Vue({
   el: '#root',
   data: {
+    index: 0,
     contacts: [
     	{
     		name: 'Michele',
@@ -89,7 +90,12 @@ var app = new Vue({
 
   },
   methods: {
-
+    getTime: function (date) {
+      let dateTime = new Date(date);
+      let hours = dateTime.getHours();
+      let minutes = dateTime.getMinutes();
+      return `${hours}:${minutes}`;
+    }
   }
 
 });
