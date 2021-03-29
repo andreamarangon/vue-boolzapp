@@ -141,6 +141,10 @@ aside {
   margin: 0 10px;
 }
 
+.container-contacts {
+  cursor: pointer;
+}
+
 
 
 /* chat */
@@ -154,9 +158,9 @@ aside {
 .container-chat-name {
   height: 60px;
   background-color: #EDEDED;
-  /* display: flex;
+  display: flex;
   align-items: center;
-  justify-content: space-between; */
+  /* justify-content: flex-start; */
   position: relative;
 }
 
