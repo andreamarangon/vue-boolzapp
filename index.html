@@ -55,7 +55,7 @@
               class="name">
              {{contact.name}}
            </h4>
-           <!-- <span>{{i.text}}</span> -->
+           <!-- <span>{{contact.text}}</span> -->
           </div>
         </div>
       </aside>
@@ -68,7 +68,7 @@
               v-if="contact.visible == true">
               <img :src="'./assets/img/avatar' + contacts[i].avatar + '.jpg'" alt="">
               <h4>{{contacts[i].name}}</h4>
-              <!-- <span>{{contact.messages[1].getTime(contact.date)}}</span> -->
+              <span> Ultimo accesso: {{lastAccess(i)}}</span>
             </div>
             <div class="container-icons-chat">
               <i class="fas fa-search"></i>
@@ -96,7 +96,10 @@
         <!-- input messaggi -->
         <div class="container-chat-input">
           <i class="fas fa-smile"></i>
-          <input type="text" name="" value="" placeholder=" Scrivi un messaggio">
+          <input
+            v-model="message"
+            placeholder=" Scrivi un messaggio"
+            @keyup.enter="send">
           <i class="fas fa-microphone"></i>
         </div>
       </div>

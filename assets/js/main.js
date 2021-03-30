@@ -1,7 +1,7 @@
 var app = new Vue({
   el: '#root',
   data: {
-    index: 0,
+    // index: 0,
     contacts: [
     	{
     		name: 'Michele',
@@ -93,7 +93,7 @@ var app = new Vue({
     getTime: function (date) {
       let newDate = date.split(' ');
       let temp = newDate[0].split('/');
-      let nuovaData = temp[2] +'-'+ temp[1] + '-'+ temp[0] + ' ' + newDate[1];
+      let nuovaData = temp[2] + '-' + temp[1] + '-'+ temp[0] + ' ' + newDate[1];
       let dateTime = new Date(nuovaData);
       let hours = dateTime.getHours();
       let minutes = dateTime.getMinutes();
@@ -105,7 +105,32 @@ var app = new Vue({
       });
       let index = this.contacts.indexOf(contact);
       this.contacts[index].visible=true;
+    },
+    lastAccess: function (index) {
+      const messages = this.contacts[index].messages;
+      const lastI = messages.length - 1;
+      return messages[lastI].date;
+    },
+    send: function () {
+      const indexCurr = this.index;
+      const date = dayjs().format('DD/MM/YYYY HH:mm:ss');
+      const message = {
+        date,
+        text: this.message,
+        status: 'sent'
+      }
+      this.contacts[indexCurr].messages.push(message);
+      this.message = '';
 
+      setTimeout(() => {
+        const date = dayjs().format('DD/MM/YYYY HH:mm:ss');
+        const message = {
+          date,
+          text: 'Ok!',
+          status: 'received'
+        }
+        this.contacts[indexCurr].messages.push(message);
+      }, 1000);
     }
   }
 
