@@ -160,9 +160,14 @@ aside {
   background-color: #EDEDED;
   display: flex;
   align-items: center;
-  /* justify-content: flex-start; */
   position: relative;
 }
+
+.info-chat-name {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .info-chat-name-container {
   display: flex;

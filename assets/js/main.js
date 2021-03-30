@@ -2,6 +2,7 @@ var app = new Vue({
   el: '#root',
   data: {
     // index: 0,
+    message: '',
     contacts: [
     	{
     		name: 'Michele',
@@ -112,7 +113,13 @@ var app = new Vue({
       return messages[lastI].date;
     },
     send: function () {
-      const indexCurr = this.index;
+      let indexCurr;
+      this.contacts.forEach((contact, i) => {
+        if (contact.visible == true) {
+          indexCurr = i;
+        }
+      });
+
       const date = dayjs().format('DD/MM/YYYY HH:mm:ss');
       const message = {
         date,

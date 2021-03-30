@@ -67,8 +67,10 @@
               v-for="(contact,i) in contacts"
               v-if="contact.visible == true">
               <img :src="'./assets/img/avatar' + contacts[i].avatar + '.jpg'" alt="">
-              <h4>{{contacts[i].name}}</h4>
-              <span> Ultimo accesso: {{lastAccess(i)}}</span>
+              <div class="info-chat-name">
+                <h4>{{contacts[i].name}}</h4>
+                <span class="last-access"> Ultimo accesso: {{lastAccess(i)}}</span>
+              </div>
             </div>
             <div class="container-icons-chat">
               <i class="fas fa-search"></i>
@@ -106,7 +108,7 @@
     </div>
   </div>
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js" integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg==" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="./assets/js/main.js" charset="utf-8"></script>
 </body>
