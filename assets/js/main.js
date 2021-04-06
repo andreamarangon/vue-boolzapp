@@ -1,7 +1,7 @@
 var app = new Vue({
   el: '#root',
   data: {
-    // index: 0,
+    contattoCercato: '',
     message: '',
     contacts: [
     	{
@@ -90,6 +90,26 @@ var app = new Vue({
     ]
 
   },
+  // computed: {
+  //   myInput: function() {
+  //     let myContacts = this.contacts;
+  //     let myContactsCercato = this.contattoCercato;
+  //     newArray
+  //     console.log(myContacts.name);
+  //     if (myContactsCercato == '') {
+  //       return myContacts
+  //     } else {
+  //       myContacts.forEach((newContacts, i) => {
+  //         if (myContacts.name.includes(myContactsCercato)) {
+  //           newContacts.push(myContacts.name)
+  //         }
+  //         return newContacts
+  //       });
+  //
+  //     }
+  //   }
+  //
+  // },
   methods: {
     getTime: function (date) {
       let newDate = date.split(' ');
@@ -138,7 +158,9 @@ var app = new Vue({
         }
         this.contacts[indexCurr].messages.push(message);
       }, 1000);
-    }
+    },
+
+
   }
 
 

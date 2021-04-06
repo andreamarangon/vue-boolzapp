@@ -73,6 +73,7 @@ aside {
   font-size: 27px;
   margin-right: 5px;
   color: gray;
+  cursor: pointer;
 }
 
 /* notifiche */
@@ -84,7 +85,8 @@ aside {
 }
 
 .notification i {
-  color: #9EE1FF
+  color: #9EE1FF;
+  cursor: pointer;
 }
 
 .notification a {
@@ -115,7 +117,7 @@ aside {
   align-items: center;
 }
 
-.contacts-input i{
+.contacts-input i {
   color: lightgray;
   margin-left: 20px;
   margin-right: 35px;
@@ -143,6 +145,16 @@ aside {
 
 .container-contacts {
   cursor: pointer;
+}
+
+.container-contact-name-time {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-contact {
+  width: 100%;
 }
 
 
@@ -184,11 +196,10 @@ aside {
   font-size: 27px;
   margin-right: 20px;
   color: gray;
+  cursor: pointer;
 }
 /* zona messaggi */
 .msg-box {
-  /* height: 30px;
-  width: 80px; */
   border-radius: 5px;
   padding: 5px 25px 10px 7px;
   max-width: 80%;
@@ -272,6 +283,7 @@ aside {
   font-size: 27px;
   margin: 0 40px;
   color: gray;
+  cursor: pointer;
 }
 
 .container-chat-input input {
